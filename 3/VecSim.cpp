@@ -26,14 +26,6 @@ double VecSim::euclideanDistance(double *firstVector,
 	return sqrt(sum);
 }
 
-double VecSim::innerProduct(double *firstVector, double *secondVector, 
-	int len) {
-	double sum = 0;
-	for(int i = 0; i < len; ++i)
-		sum += firstVector[i] * secondVector[i];
-	return sum;
-}
-
 double VecSim::cosineSimilarity() {
 	cosineSimilarity(firstVector, secondVector, len);
 }
@@ -47,4 +39,12 @@ double VecSim::cosineSimilarity(double *firstVector,
 	}
 	return innerProduct(firstVector, secondVector, len) 
 		/ (sqrt(firstSum) * sqrt(secondSum));
+}
+
+double VecSim::innerProduct(double *firstVector, double *secondVector, 
+	int len) {
+	double sum = 0;
+	for(int i = 0; i < len; ++i)
+		sum += firstVector[i] * secondVector[i];
+	return sum;
 }

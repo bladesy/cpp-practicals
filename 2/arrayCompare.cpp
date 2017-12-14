@@ -27,7 +27,8 @@ int sameElements(int *firstArray, int *secondArray, int size) {
 		/* Return that it is false that the arrays have the same
 		elements if an index does not yield the same element from both
 		arrays */
-		if(tempFirstArray[i] != tempFirstArray[i])
+		if(tempFirstArray[i] != tempSecondArray[i])
+			/* Move to after temp array deletion */
 			return 0;
 	
 	/* Delete the temporary arrays after the comparisons are over */
@@ -56,7 +57,7 @@ int bubbleSort(int *array, int size) {
 	on. 
 	This particular implementation was written from the inside at the if
 	statement first, and backwards from there. */
-	for(int j = size - 1; j > 0; --j) {
+	for(int j = size - 1; j > 1; --j) {
 		/* Increment and repeat so that every pair of i and i + 1 get
 		are compared */
 		for(int i = 0; i < j; ++i) {

@@ -1,7 +1,9 @@
 #include <ostream>
+#include <string>
 #include "Person.h"
 
 using std::ostream;
+using std::stoi;
 using std::endl;
 
 int Person::age(int year) const {
@@ -22,6 +24,14 @@ bool Person::operator==(const Person &person) const {
 
 bool Person::operator!=(const Person &person) const {
 	return !(*this == person);
+}
+
+bool Person::operator>=(const Person &person) const {
+	return stoi(id) >= stoi(person.id);
+}
+
+bool Person::operator<=(const Person &person) const {
+	return stoi(id) <= stoi(person.id);
 }
 
 ostream &operator<<(ostream &ostream, const Person &person) {

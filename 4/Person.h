@@ -13,9 +13,9 @@ class Person {
 	public:
 		/* Constructors */
 		/* Parametised */
-		Person(string firstName, string lastName, string id,
-			int birthYear) : firstName(firstName), lastName(lastName), 
-			id(id), birthYear(birthYear) {}
+		Person(string firstName, string lastName, string id, 
+		int birthYear) : firstName(firstName), lastName(lastName),
+		id(id), birthYear(birthYear) {}
 		/* Default */
 		Person() : firstName(""), lastName(""), id(""), birthYear(0) {}
 
@@ -57,11 +57,14 @@ class Person {
 		/* Operator Overloading */
 		bool operator==(const Person &person) const;
 		bool operator!=(const Person &person) const;
+		bool operator>=(const Person &person) const;
+		bool operator<=(const Person &person) const;
 		
 		/* Friend Functions */
 		/* Note that friend functions are not neccessarily member
 		functions */
-		friend ostream &operator<<(ostream &ostream, const Person &person);
+		friend ostream &operator<<(ostream &ostream,
+			const Person &person);
 
 	private:
 		/* Constants */

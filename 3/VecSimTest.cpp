@@ -10,9 +10,9 @@ int main(void) {
 		= {3., 4.5, 6., 7.5, 9., 10.5, 12., 13.5, 15., 16.5};
 	VecSim myVecSim;
 	
-	cout << "Euclidean: " 
+	cout << "Euclidean: "
 		<< myVecSim.euclideanDistance(vector1, vector2, 10) << endl;
-	cout << "Cosine: " 
+	cout << "Cosine: "
 		<< myVecSim.cosineSimilarity(vector1, vector2, 10) << endl;
 	
 	return 0;
